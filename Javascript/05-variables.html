@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <title>Variables</title>
+    
+    
+
+  </head>
+ 
+  
+  <body>
+    
+
+    <script>
+      let variable1 = 3;//assigning value 3 to variable1
+      console.log(variable1);
+
+      //let calculation = 2 + 2;
+      const calculation = 2 + 2; //using const keyword to create constant variable
+      console.log(calculation);
+      console.log(2 + calculation);
+      console.log(variable1 + calculation); //we can use a variable wherever we are using a value
+
+      //let result = 2 + calculation;
+      const result = 2 + calculation;
+      console.log(result);
+
+      //we can also use strings as a value for variables
+      //let message = "Hello, world!";
+      const message = "Hello, world!"; //constant variable
+      console.log(message);
+      //reassigning a new value to variable
+      
+      variable1 = 5;//for reassignment, we don't use 'let' keyword bcz 'let' word used to creates a new variable
+      console.log(variable1);
+
+
+      variable1 = variable1 + 2; //we can also use the variable itself to reassign a new value
+      console.log(variable1);
+
+      const variable2 = 10; //constant variable, we cannot reassign value to constant variable
+      console.log(variable2);
+      //variable2 = 15; //this will give error
+
+      var variable3 = 7; //we can also use 'var' keyword to create variable,we don't use 'var' keyword generally nowadays in new javascript code due to some scoping issues
+      console.log(variable3);
+      
+      console.log(typeof variable1); //to check the type of variable
+      console.log(typeof message);
+    </script>
+ 
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
