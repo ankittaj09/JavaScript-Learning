@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <title>Cart Quantity</title>
+    
+  </head>
+ 
+  
+  <body>
+    <p>
+      Cart Quantity
+    </p>
+
+    
+    <button onclick="console.log(`Cart Quantity: ${cartQuantity}`);">Show Quantity</button>  <!--here we can see variables also work with strings interpolation--> 
+    
+
+    <button onclick = 'cartQuantity += 1; console.log(`Cart Quantity: ${cartQuantity}`);'>Add to Cart</button>
+    <!--cartQuantity +=  1--> 
+
+    <button onclick = 'cartQuantity += 2; console.log(`Cart Quantity: ${cartQuantity}`);'>+2</button>
+
+    <button onclick = 'cartQuantity += 3; console.log(`Cart Quantity: ${cartQuantity}`);'>+3</button>
+
+    <button onclick = 'cartQuantity +=4; console.log(`Cart Quantity: ${cartQuantity}`);'>+4</button>
+
+    <button onclick = 'cartQuantity += 5; console.log(`Cart Quantity: ${cartQuantity}`);'>+5</button>
+
+    <button onclick = 'cartQuantity -= 2; console.log(`Cart Quantity: ${cartQuantity}`);'>-2</button>
+
+    <button onclick = 'cartQuantity -= 3; console.log(`Cart Quantity: ${cartQuantity}`);'>-3</button>
+
+    <button onclick = 'cartQuantity --; console.log(`Cart Quantity: ${cartQuantity}`);'>Remove</button>
+    
+    <button onclick = 'cartQuantity = 0; console.log("Cart has reset."); console.log(`Cart Quantity: ${cartQuantity}`);'>Reset Cart</button>
+    
+    <script>
+      //1.we need somewhere to save cart quantity & variables help us do that
+      let cartQuantity = 0; //initially cart quantity is 0
+    </script>
+ 
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
