@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <title>Booleans & if condition</title>
+    
+    
+
+  </head>
+ 
+  
+  <body>
+    
+
+    <script> 
+      console.log(3<5); //boolean value true
+      console.log(4<3); //boolean value false
+      console.log(typeof true); //boolean is a data type in javascript
+      console.log(5 == "5"); //loose equality operator, it checks for value only, it will return true
+      console.log(5 === "5"); //strict equality operator, it checks for value and
+      console.log(5 != "5"); //loose inequality operator, it checks for value only, it will return false
+      console.log(5 !== "5"); //strict inequality operator, it checks for value and
+      console.log(3> 5-5); //boolean value false
+    
+
+    if (true) {
+      console.log("Hello, world!"); //this will always execute because the condition is true
+    }
+    
+    if (false) {
+      console.log("This will not be printed"); //this will never execute because the condition is false
+    } else {
+      console.log("This will be printed because the condition is false"); //this will execute because the condition in if statement is false
+    }
+
+
+    // a practical example for check driving age
+    // if condition is true.
+    if(30>=16) {
+      console.log("you can drive"); //this will execute because the condition is true
+    }else {
+      console.log("you cannot drive");
+    }
+
+
+    // if condition is false,else block will execute
+    if(15>=16) {
+      console.log("you can drive"); //this will execute because the condition is true
+    }else {
+      console.log("you cannot drive");
+    
+    }
+
+
+    //we can avoid brckets if we have only one statement in if or else block but it's a good practice to use brackets to avoid confusion and errors in future when we add more statements in if or else block
+     if(15<=16) 
+      console.log("hi how are you!"); //this will execute because the condition is true
+     else 
+      console.log("you cannot drive");
+
+    //we can also have more than 1 condition using else if statement
+    if(15>=16) {
+      console.log('Congrats');
+      console.log("you can drive"); //this will execute because the condition is true
+    }else if(15>=14){
+      console.log("you can drive with supervision"); //this will execute because the condition is true
+
+    }else {
+      console.log("you cannot drive");
+    }
+
+    //combining if statements with variables
+    const age = 20;
+    if(age>=16){
+      console.log("you can drive :)");
+    }
+
+    //LOGICAL OPERATORS
+    //add operator
+    console.log(true && true);
+    console.log(true && false);
+    //or operator
+    console.log(true || false);
+    //NOT operator
+    console.log(!true);
+
+    //Truthy And Falsy values
+    if(5){
+      console.log('truthy');
+    } // 5 is a truthy value(it behaves just like true)
+    if(0){
+      console.log('truthy');
+    } // 0 is a falsy value(it behaves just like false)
+
+    //Falsy value(false,0,"",NaN(Not a Number),undefined(value dont exists),null(later in the course))
+    //Any Value not on this list is truthy value
+    
+    
+    //why we use?
+    const cartQuantity = 5;
+
+    if (cartQuantity){
+      console.log('cart has products')
+    }
+
+    console.log(!0);
+
+    console.log('text'/5);
+
+    let variable1; //undefined can only be used with let
+    const variable2 = undefined;
+    console.log(variable1);
+    console.log(variable2);
+
+    //   shortcuts for if-statements:
+    //   ternary operator ?:
+    //   Guard operator &&
+    //   Default Operator ||
+
+
+    // ternary operator
+    const myValue = true ? 'truthy' : "falsy";
+    console.log(myValue);
+    const myValue1 = 0 ? 'truthy' : "falsy";
+    console.log(myValue1);
+
+    // Guard or AND Operator &&
+    // value1 && value2
+    // checks if 2 sides are both truthy
+    // let say if (false && value 2),this is call short circuit evaluation bcz stops early and doesnt need to run the code on the right
+
+    false && console.log("Hello World!");
+    // above is shortcut for:
+    // if(condition){
+    //   console.log('hello')
+    // } 
+
+    const message = false && "Hello World!";
+    console.log(message);
+    const message1 = 5 && "Ankit";
+    console.log(message1);
+    // above is shortcut for:
+    // let message
+    // if(condition){
+    //   message = 'hello'
+    // } 
+
+
+
+    // Default Operator ||
+    // value1 || value2
+    // true || value2(x)
+    // -stops early(short-circuits)
+    // checks if at least 1 side is truthy
+      
+   const currency = 'EUR' || 'USD';
+   console.log(currency);
+
+    //  below is the representation of default operator
+    // shortcut for:
+    // let currency;
+    // if(!condition){
+    //   currency = 'USD';
+    // }
+   const currency1 = undefined || 'USD';console.log(currency1);
+
+    
+    
+
+
+
+
+    </script>
+ 
+  </body>
+</html>
+
+<!-- In this Lesson:
+1. Boolean Values(true,false)
+2.if-statements 
+3.Comparison Operators(>,<,>=,<=,===,!==)
+4.Algorithms,and created Rock Paper Scissors
+5.Truthy and falsy values
+6.shortcuts for if-statements(ternary,guard,default) -->
+
+
+
+
+
+
+
+
+
+
+
+
