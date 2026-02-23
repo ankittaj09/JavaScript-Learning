@@ -17,29 +17,29 @@
     
 
     <button onclick='cartQuantity !==10 && (cartQuantity+1)<=10 
-      ? (cartQuantity += 1, console.log(`Cart Quantity: ${cartQuantity}`)):alert("The Cart is full") '>Add to Cart</button>
+      ? (cartQuantity += 1, console.log(`Cart Quantity: ${cartQuantity}`)):(cartQuantity === 10?alert("The Cart is full"):alert(`Now!You can only add  ${10-cartQuantity} items`)) '>Add to Cart</button>
            <!--cartQuantity +=  1--> 
 
     <button onclick = 'cartQuantity !==10 && (cartQuantity+2)<=10
-      ? (cartQuantity += 2, console.log(`Cart Quantity: ${cartQuantity}`)):alert("The Cart is full") '>+2</button>
+      ? (cartQuantity += 2, console.log(`Cart Quantity: ${cartQuantity}`)):(cartQuantity === 10?alert("The Cart is full"):alert(`Now!You can only add  ${10-cartQuantity} items`))  '>+2</button>
 
     <button onclick = 'cartQuantity !==10 && (cartQuantity+3)<=10 
-      ? (cartQuantity += 3, console.log(`Cart Quantity: ${cartQuantity}`)):alert("The Cart is full") '>+3</button>
+      ? (cartQuantity += 3, console.log(`Cart Quantity: ${cartQuantity}`)):(cartQuantity === 10?alert("The Cart is full"):alert(`Now!You can only add  ${10-cartQuantity} items`))  '>+3</button>
 
     <button onclick = 'cartQuantity !==10 && (cartQuantity+4)<=10
-      ? (cartQuantity += 4, console.log(`Cart Quantity: ${cartQuantity}`)):alert("The Cart is full") '>+4</button>
+      ? (cartQuantity += 4, console.log(`Cart Quantity: ${cartQuantity}`)):(cartQuantity === 10?alert("The Cart is full"):alert(`Now!You can only add  ${10-cartQuantity} items`))  '>+4</button>
 
     <button onclick = 'cartQuantity !==10 && (cartQuantity+5)<=10
-      ? (cartQuantity += 5, console.log(`Cart Quantity: ${cartQuantity}`)):alert("The Cart is full") '>+5</button>
+      ? (cartQuantity += 5, console.log(`Cart Quantity: ${cartQuantity}`)):(cartQuantity === 10?alert("The Cart is full"):alert(`Now!You can only add  ${10-cartQuantity} items`)) '>+5</button>
 
     <button onclick = 'cartQuantity == 0 || (cartQuantity -2)<0
-      ? alert("Not Enough items in the Cart") : (cartQuantity -= 2, console.log(`Cart Quantity: ${cartQuantity}`)) '>-2</button>
+      ? (cartQuantity == 0?alert("Not Enough items in the Cart"):alert(`only ${cartQuantity} can be removed`)) : (cartQuantity -= 2, console.log(`Cart Quantity: ${cartQuantity}`)) '>-2</button>
 
     <button onclick = 'cartQuantity == 0 || (cartQuantity -3)<0
-      ? alert("Not Enough items in the Cart") : (cartQuantity -= 3, console.log(`Cart Quantity: ${cartQuantity}`))'>-3</button>
+      ? (cartQuantity == 0?alert("Not Enough items in the Cart"):alert(`only ${cartQuantity} can be removed`)) : (cartQuantity -= 3, console.log(`Cart Quantity: ${cartQuantity}`))'>-3</button>
 
     <button onclick = 'cartQuantity == 0 || (cartQuantity -1)<0
-      ? alert("Not Enough items in the Cart") : (cartQuantity --, console.log(`Cart Quantity: ${cartQuantity}`))'>Remove</button>
+      ? (cartQuantity == 0?alert("Not Enough items in the Cart"):alert(`only ${cartQuantity} can be removed`)) : (cartQuantity --, console.log(`Cart Quantity: ${cartQuantity}`))'>Remove</button>
     
     <button onclick = 'cartQuantity = 0; console.log("Cart has reset."); console.log(`Cart Quantity: ${cartQuantity}`);'>Reset Cart</button>
     
