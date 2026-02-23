@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>6d-e</title>
+    </head>
+ 
+  
+    <body>
+
+        
+    
+        <script>
+            // let hour = new Date().getHours();
+            // console.log(hour);
+
+            let age = 30;
+            let isHoliday = false;
+
+
+            // && has a higher priority than || so for
+            // this to work correctly, we need to add
+            // brackets () around the || check to make
+            // sure that it gets done first.
+
+            // if(isHoliday){
+
+            //     if(age<=6 || age>=65){
+            //         console.log(`Discount`);
+            //     }
+            if(!isHoliday && (age<=6||age>=65)){
+                console.log("Discount");
+            }
+            else {
+                console.log(`No discount`);
+
+            }
+
+      
+        </script>
+ 
+    </body>
+</html>
