@@ -1,0 +1,83 @@
+<!-- 
+ what is a function?
+    A function lets us reuse code 
+
+why do we use function?
+    A function lets us reuse code
+    functions make our code easier to update
+
+syntax rules:
+    function function_name(){
+        ............
+        ....code executes when function is called .....
+        ............
+    
+    }
+        and this only creates a function.
+        it doesn't run the code inside.
+
+rules for function_names:
+    1. can't use special words.example function
+    2.can't start with a number.
+    3.can't use special characters.except:$ _
+    4.use camelCase to name
+    5.use a verb/action
+
+feature of function:
+ Return statement-lets us get a value out of a function
+ and that value can be anything(number,string,variable.........)
+ when we use a return statement it ends the statement immediately.
+
+ Parameter or argument:
+  return = get a value **out of** a function
+  parameter = put a value **into** a function
+
+  ** A parameter only exists inside the function scope.
+  ** A Function can have more than one parameter.
+
+  Rules for Parameter Names
+  1.Can't use special words.Example:Function
+  2.Can't start with a number
+  3.Can't use special characters
+
+  Best Practice = use camelCase
+
+    -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+    
+        <title>Functions</title>
+    </head>
+ 
+  
+    <body>
+
+        
+        
+    
+        <script>
+           /*function function1(){
+            console.log('hello');
+            console.log(2+2);
+           }
+
+           function1();
+           function1();*/
+           function calculateTax(parameter1,parameter2=0.1){
+            console.log(parameter1*parameter2);
+
+            
+
+           }//parameter2 = 0.1 means we are passing a default value of this parameter
+           calculateTax(2000,0.3);
+           calculateTax(5000);//passsing a value(argument) into the function
+           
+        </script>
+ 
+    </body>
+</html>
