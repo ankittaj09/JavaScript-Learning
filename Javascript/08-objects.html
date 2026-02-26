@@ -1,0 +1,242 @@
+<!-- 
+ objects - An object groups multiple values together
+ and let us use multiple values together
+
+ -Inside an object,we can save any type of value->numbers,string,booleans,functions,objects
+
+
+ syntax rule:
+
+ let object_name ={
+  property:value,
+  property:value,
+  ..............
+  ..............
+  ..............
+ 
+ }
+ 
+ why we use objects:
+ make our code more organised
+
+ Built-in Objects
+ console
+ math
+ 
+----- 2-More built-in-Objects----
+
+ 1.--JSON Object--
+
+ ->helps us work with JSON
+    JSON(javascript object notation)
+    -a syntax
+    -similar to javascript object
+    -but has less features
+
+    -Javascript Object syntax-
+    -only make sense in javascript
+
+     const product2 = {
+            name: 'shirt',
+
+            ['delivery-time']:'1 day',
+
+            "shipping-time":'2-day',
+
+            rating:{
+              stars:4.5,
+              count:87
+            },
+
+            fun:function function1(){
+              console.log('function inside object')
+            }
+          }
+    
+    -JSON-
+
+    -property and value must be "" double cots
+    -JSON doesnt support functions
+    -every programming language support JSON syntax
+    -so JSON is more universal thats why we use JSON when we send data between computers that might use different program languages
+    -when we store data
+
+     {
+        "name":"shirt",
+
+        "delivery-time":"1-day",
+
+        "rating":{
+          "stars":4.5,
+          "count":87
+        }
+    }
+    -JSON built-in object convert javascript object -----JSON object
+
+ 2.--localstorage--
+    used to save values more permanently
+    bcz variable are temporary only exists on the current page,if we refresh/close the page,all the variables are deleted
+
+
+ ***MORE DETAILS ABOUT OBJECTS***
+ NULL - is used when initentionally want something to be empty.
+ e.g-
+ function func(parameter = 'default'){
+  console.log(parameter);
+ }
+
+ func(); => 'default'
+ func(undefined); => 'default'
+
+ func(null); => null
+ in most case null and undefined works the same way
+
+ we learned that object have property and method,
+ but other value also have properties and method.e.g below.
+
+ AUTO-BOXING-
+ Auto-boxing is the process in JavaScript where a primitive value (such as a string, number, or boolean) is automatically converted into its corresponding wrapper object when a method or property is accessed on it.
+
+ OBJECTS ARE REFERENCES-
+
+ -->
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+    
+        <title>objects</title>
+    </head>
+ 
+  
+    <body>
+
+         
+        
+    
+        <script>
+
+          /*const product = {
+            name : 'shocks', //name,price is property
+            price : 1090
+          };
+
+          console.log(product);
+          console.log(product.name);//by using property we can access the value associated with that property by (object_name.property_name)
+          console.log(product.price);
+
+          product.name = "Jeans";//updating property value
+          console.log(product.name);
+
+          product.newProperty = true;//inserting new data to the object
+          console.log(product);
+
+          delete product.newProperty;
+          console.log(product);
+
+          console.log(typeof product); */
+
+          const product2 = {
+            name: 'shirt',
+            ['delivery-time']:'1 day',
+            "shipping-time":'2-day',//if string is between []brackets its optional to use [].
+            rating:{
+              stars:4.5,
+              count:87
+            },
+            fun:function function1(){
+              console.log('function inside object')
+            }//a function is another type of value
+            //and function inside an object -> **METHOD**
+
+          };
+          console.log(product2);
+          console.log(product2.name);
+
+          console.log(product2['name']);//bracket notation does the same thing as (.)dot notation
+          //and between the [] we can use use anything with gives us a value string,number,calculation....etc
+
+          /* which one should we use?
+            -use dot notation by default
+            -for properties that dont work use bracket notation*/
+
+           
+          //when do we use []notation instead of (.)notation
+          //bracket notation-lets us use properties that dont work with dot notation,e.g
+          
+          //console.log(product2.delivery-time);
+          
+          //this will give us error bcz it counts (-)dash in key name as minus and trying to do substraction operation
+          console.log(product2['delivery-time']); 
+
+          console.log(product2.rating.count);
+
+          product2.fun();
+
+          console.log(typeof console);
+          console.log(typeof console.log);//here log is a method(function) inside an object console
+
+          console.log(JSON.stringify(product2));//stringify method in the object JSON convert Javascript object to JSON
+          console.log(typeof JSON.stringify(product2));
+          //To convert JSON ---> JavaScript Object we use (JSON.pase())
+          const jsonString = JSON.stringify(product2);
+          console.log(JSON.parse(jsonString));
+
+          // but other value also have properties and method.e.g below.
+          console.log('hello'.length);//autoboxing
+          console.log('hello'.toUpperCase());
+          // auto-boxing also works with numbers and booleans ,and not work with null and undefined. 
+          console.log(3.0.toString());
+          console.log(true.toString());
+
+          // OBJECTS ARE REFERENCES-
+          const object1 ={
+            message:'hello'
+          } 
+          // object1 is a reference
+          const object2 = object1;//copy by reference
+
+          object1.message = 'good job!';
+          console.log(object1);//although we have defined object1 as const but const dont work with objects .it only work with variables
+
+          //we cant compare objects directly
+
+          const object3 = {
+            message : 'Good job!'
+          };
+
+          console.log(object3 === object1);
+          console.log(object2 === object1);//true
+
+          //shortcuts for objects
+
+          const object4 = {
+            message : 'Good job!',
+            price: 799
+          };
+          //const message = object4.message;
+          const {message,price}= object4;//both are same and that is called destructing
+
+          console.log(message);
+          console.log(price);
+
+          //shorthand property
+          const object5 = {
+            //message: message
+            message,
+            /*method: function function1(){
+              console.log('method');
+            }*/
+           //shorthand method syntax
+            method(){
+              console.log('method');
+            }
+          };
+          console.log(object5);
+          object5.method();
+          
+        </script>
+ 
+    </body>
+</html>
