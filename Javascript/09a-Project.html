@@ -1,0 +1,70 @@
+
+<!--
+.innerText - allows us to discard extra space around the element text
+
+e.g
+here (.) are spaces
+<button>....subcribe...</button>
+
+so .innnerText dont count extra space but that not the case with .innerHTML
+
+
+
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+    
+        <title>DOM-Projects</title>
+    </head>
+ 
+  
+    <body>
+      <h1>Youtube Subscribe Button</h1>
+      <button onclick="subscribeButton()">
+        Subscribe</button>
+         
+        
+    
+        <script>
+          // My Logic
+          // let clickCount = 0;
+          // function subscribeButton (){
+          //   clickCount ++;
+          //   if(clickCount % 2 === 0){
+          //     secondClick();
+          //   }
+          //   else{
+          //   document.querySelector('button').innerHTML = 'Subscribed';
+
+            
+
+          // }
+          // }
+
+          // function secondClick(){
+          //   document.querySelector('button').innerHTML = 'Subscribe';
+          // }
+
+          //more powerful logic
+          function subscribeButton (){
+            const buttonElement = document.querySelector('button');
+
+            if(buttonElement.innerText==='Subscribe'){
+              buttonElement.innerText = 'Subscribed';
+
+            }else{
+              buttonElement.innerText = 'Subscribe';
+            }
+          }
+
+
+        
+           
+          
+          
+        </script>
+ 
+    </body>
+</html>

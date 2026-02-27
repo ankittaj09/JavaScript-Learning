@@ -1,0 +1,124 @@
+<!--
+DOM-Document Object Model
+DOM is a programming interface that allows JavaScript to access and modify HTML and CSS.
+
+HTML
+   ↓
+Parser
+   ↓
+DOM Tree
+   ↓
+JavaScript modifies DOM
+   ↓
+Browser Repaint/Reflow
+   ↓
+Updated Screen
+
+🌳 DOM is a Tree Structure
+
+Top → document
+
+Then → html
+
+Then → body
+
+Then → child elements
+
+That’s why we call it Document Object Model
+
+Document → whole page
+
+Object → everything is object
+
+Model → structured representation
+
+The document object represents the DOM of a webpage and allows JavaScript to dynamically manipulate content, structure, style, and behavior.
+
+-another built-in object called Document object which is linked to the webpage.
+
+-when a HTML element is inside javascript,its just a javascript object.
+
+-Every HTMl element has a property called (.innerHTML)
+
+
+syntax rules for the DOM-
+
+document.property.propety = value;
+
+Properties and Methods-
+
+Property:-
+.title
+.body(innerHTML)
+
+Methods:-
+document.querySelector()-lets us get any element from the page and put it inside Javascript.
+
+
+
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+    
+        <title>DOM</title>
+    </head>
+ 
+  
+    <body>
+
+         <button>Hello</button>
+         <button class = 'js-button'>Second Button</button> 
+         <!--class attribute is a class selector which we have used in css
+         a common practice to name class is (js-name)
+         -->
+        
+    
+        <script>
+             /*
+            document.body.innerHTML = 'hello';
+            document.title = "Good Job!";*/
+
+            // from these examples the document object represents/models the webpage(DOM)
+
+            // console.log(document.title);
+            // document.title = 'changed';
+
+            // console.log(document.body);//we can have HTML elements inside Javascript
+            //The DOM combines Javascript and HTML together
+
+            /* when a HTML element inside the javascript - The HTML element is converted into a javascript object*/
+            // console.log(typeof document.body);
+
+            // console.log(document.body.innerHTML);
+
+            //document.body.innerHTML = 'Changed';
+            // document.body.innerHTML = '<button>Good Job!</button>';
+
+            // console.log(typeof document.querySelector('button'));
+
+            // console.log(document.querySelector('body'));
+           
+            console.log(document.querySelector('button').innerHTML);
+            
+            document.querySelector('button')
+                .innerHTML = 'changed';
+            
+            //  document.querySelector('.js-button').innerHTML = 'Second changed';
+
+            //HTML elements are javascript objects and objects are values ,so we can it in a variable
+
+            const buttonElement = document.querySelector('.js-button');
+
+            console.log(buttonElement);
+
+            // so using the DOM-we can get html element inside the javascript and store it in a variable
+
+
+          
+          
+        </script>
+ 
+    </body>
+</html>
